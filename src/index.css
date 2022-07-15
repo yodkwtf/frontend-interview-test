@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --clr-black: #000;
+  --clr-white: #fff;
+  --clr-grey: #fafafa;
+  --clr-grey-dark: #999;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+h3,
+p {
+  line-height: 1.5;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  row-gap: 2rem;
+  place-items: center;
+  padding: 2rem;
+}
+
+.card {
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  place-items: center;
+  gap: 2rem;
+}
+
+section {
+  display: flex;
+  gap: 1rem;
+}
+
+section button {
+  padding: 0.25rem .5rem;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  gap: 1rem;
+}
+
+/* loader */
+
+.loading {
+  margin: 0 auto;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid var(--clr-grey-dark);
+  border-radius: 50%;
+  border-top-color: var(--clr-black);
+  animation: loading 0.75s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
 }
